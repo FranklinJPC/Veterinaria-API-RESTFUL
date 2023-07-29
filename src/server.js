@@ -3,6 +3,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import routerVeterinario from './routers/veterinario.routes.js'
+import routerPacientes from './routers/paciente.routes.js'
 
 /* ----------Inicializacion---------- */
 // de express por medio de una variable
@@ -25,6 +26,7 @@ app.get('/', (req, res) =>{
     res.send('Funciona!!!')
 })
 app.use('/api', routerVeterinario) //Inicializa con un previjo previo
+app.use('/api', routerPacientes)
 // Manejo de una ruta que no sea encontrada
 app.use((req,res)=>res.status(404).send("Endpoint no encontrado - 404"))
 
