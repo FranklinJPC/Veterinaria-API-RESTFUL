@@ -17,7 +17,10 @@ app.use(cors())
 /* -----------Middlewares-------- */
 // se habilita esta funcion debdio a que se manejan envios de JSON
 app.use(express.json())
-
+app.use(fileUpload({
+    useTempFiles : true,
+    tempFileDir : './uploads'
+}));
 /* -----------Variables Globales-------- */
 
 

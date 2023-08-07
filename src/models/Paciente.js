@@ -50,6 +50,10 @@ const pacienteSchema = new Schema({
     veterinario:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Veterinario'
+    },
+    image:{
+        public_id:String,
+        secure_url:String
     }
 },{
     timestamps:true
